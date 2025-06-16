@@ -16,7 +16,7 @@ import React, { useState, useEffect } from "react";
 import supabase from "../supabaseClient";
 import { useParams } from "react-router-dom";
 
-const Order = () => {
+const PlaceOrder = () => {
   const { productId } = useParams(); //url bata id lina ko lagi: http://localhost:5173/order/3
   const [quantity, setQuantity] = useState(1);
   const [userId, setuserId] = useState(null);
@@ -40,6 +40,8 @@ const Order = () => {
       console.log("data:", data)
     }
   };
+  if (!productId) return <div>No product selected</div>;
+
 
   useEffect(() => {
     async function fetchProduct() {
@@ -95,7 +97,7 @@ const Order = () => {
   );
 };
 
-export default Order;
+export default PlaceOrder;
 
 // buy ma click hudha we go to route order/4
 // on the order page we get that
