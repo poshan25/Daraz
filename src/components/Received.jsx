@@ -1,8 +1,14 @@
 import React from 'react'
+import UserNav from './UserNav'
 
 const Received = () => {
   return (
-    <div>Received</div>
+    <>
+    <UserNav/>   
+     <div>Received</div>
+
+
+    </>
   )
 }
 

@@ -134,6 +134,7 @@
 
 import React, { useEffect, useState } from "react";
 import supabase from "../supabaseClient";
+import AdminNav from "../components/AdminNav";
 
 const ViewOrder = () => {
   const [orders, setOrders] = useState([]);
@@ -149,7 +150,7 @@ const ViewOrder = () => {
       products(id, name, price, image_url)
     `
         )
-        .neq("status", "confirmed"); // Only orders with status not equal to "confirmed"
+        .neq("status", "confirmed");
 
       if (error) {
         console.error("err fetching orders:", error);
@@ -181,6 +182,9 @@ const ViewOrder = () => {
   }
 
   return (
+    <>
+    <AdminNav/>
+   
     <div>
       <h2>Orders</h2>
 
@@ -226,6 +230,7 @@ const ViewOrder = () => {
         </div>
       ))}
     </div>
+     </>
   );
 };
 

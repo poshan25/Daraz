@@ -15,6 +15,7 @@
 import React, { useState, useEffect } from "react";
 import supabase from "../supabaseClient";
 import { useParams } from "react-router-dom";
+import UserNav from "../components/UserNav";
 
 const PlaceOrder = () => {
   const { productId } = useParams(); //url bata id lina ko lagi: http://localhost:5173/order/3
@@ -68,6 +69,8 @@ const PlaceOrder = () => {
 
   return (
     // product information show
+    <>
+    <UserNav/>
     <div className="border p-5 w-fit m-5">
       <div>
         <h1>{product.name}</h1>
@@ -94,6 +97,7 @@ const PlaceOrder = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

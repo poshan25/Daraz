@@ -246,6 +246,7 @@
 
 import React, { useState } from "react";
 import supabase from "../supabaseClient";
+import AdminNav from "../components/AdminNav";
 
 const AdminAddProduct = () => {
   const [name, setName] = useState("");
@@ -328,6 +329,8 @@ const { data: { publicUrl }, error: urlError } = supabase.storage
   };
 
   return (
+    <>
+    <AdminNav/>
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl p-8">
         <div className="text-center mb-8">
@@ -421,6 +424,8 @@ const { data: { publicUrl }, error: urlError } = supabase.storage
         </form>
       </div>
     </div>
+        </>
+
   );
 };
 

@@ -1,14 +1,14 @@
 import React from 'react'
 import UserNav from './UserNav'
 
-const ToReceive = () => {
+const OrderStatus = () => {
   return (
     <>
     <UserNav/>
-        <div>ToReceive</div>
+        <div>Order Status</div>
 
     </>
   )
 }
 
-export default ToReceive
+export default OrderStatus

@@ -1,3 +1,6 @@
+
+
+
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import supabase from "../supabaseClient";
@@ -9,7 +12,9 @@ const User = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data, error } = await supabase.from("products").select("*");
+      const { data, error } = await supabase
+        .from("products")
+        .select("*");
 
       if (error) {
         console.error("Error fetching products:", error);
@@ -21,26 +26,10 @@ const User = () => {
     fetchProducts();
   }, []);
 
-  async function addToCart(productId) {
-
-    const { error } = await supabase
-      .from("cart")
-      .insert([{  product_id: productId }]);
-
-    if (error) {
-      alert("Failed to add to cart");
-      console.error(error);
-    } else {
-      alert("Product added to cart!");
-    }
-  }
-
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <UserNav />
-      <h1 className="text-2xl font-bold mb-6 text-center">
-        Available Products
-      </h1>
+      <UserNav/>
+      <h1 className="text-2xl font-bold mb-6 text-center">Available Products</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
@@ -62,13 +51,6 @@ const User = () => {
               className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-all"
             >
               Buy
-            </button>
-
-            <button
-              onClick={() => addToCart(product.id)}
-              className="border p-2 m-2 bg-blue-500 hover:bg-blue-700 rounded-2xl text-white cursor-pointer"
-            >
-              Add to cart
             </button>
           </div>
         ))}

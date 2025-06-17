@@ -11,22 +11,26 @@ import ViewOrder from "./pages/ViewOrder";
 import Verify from "./components/Verify";
 import User from "./components/User";
 import Admin from "./components/Admin";
-import TrackOrder from "./components/TrackOrder";
+// import TrackOrder from "./components/OrderStatus";
 import ToReceive from "./components/ToReceive";
+// import { Routes, Route } from "react-router-dom";
+import AdminLayout from "./components/AdminLayout";
+import UserLayout from "./components/UserLayout";
 import Received from "./components/Received";
 import UserCart from "./components/UserCart";
-
+import UserProducts from "./pages/UserProducts";
+import OrderStatus from "./components/OrderStatus";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />}></Route>
-      {/* <Route path="/admin" element={<AdminAddProduct />}></Route> */}
-      <Route path="/admin" element={<Admin />}></Route>
-            <Route path="/adminAddProduct" element={<AdminAddProduct />}></Route>
-                        <Route path="/userCart" element={<UserCart />}></Route>
-                                                <Route path="/trackOrder" element={<TrackOrder />}></Route>
+    <Route path="/" element={<Home />}></Route>
+        <Route path="/admin" element={<Admin />}></Route>
+      <Route path="/adminAddProduct" element={<AdminAddProduct />}></Route>
+      <Route path="/userCart" element={<UserCart />}></Route>
+            <Route path="/viewOrder" element={<ViewOrder />}></Route>
 
+      <Route path="/orderStatus" element={<OrderStatus />}></Route>
 
       <Route path="/toReceive" element={<ToReceive />}></Route>
 
@@ -34,12 +38,35 @@ function App() {
 
       <Route path="/user" element={<User />}></Route>
       <Route path="/order/:productId" element={<PlaceOrder />}></Route>
-      <Route path="/vieworder" element={<ViewOrder />}></Route>
-            <Route path="/verify" element={<Verify />}></Route>
+      <Route path="/verify" element={<Verify />}></Route>
 
-      {/* <Route path="/order" element={<Order />}></Route> */}
+      {/* <Route
+        path="/admin/*"
+        element={
+          <AdminLayout>
+            <Admin/>
+            <Routes>
+                    <Route path="/adminAddProduct" element={<AdminAddProduct />}></Route>
 
+                    <Route path="/vieworder" element={<ViewOrder />}></Route>
 
+            </Routes>
+          </AdminLayout>
+        }
+      />
+
+      <Route
+        path="/user/*"
+        element={
+          <UserLayout>
+            <UserProducts/>
+            <Routes>
+              <Route path="Usercart" element={<UserCart />} />
+              <Route path="trackOrders" element={<TrackOrder />} />
+            </Routes>
+          </UserLayout>
+        }
+      /> */}
     </Routes>
   );
 }
