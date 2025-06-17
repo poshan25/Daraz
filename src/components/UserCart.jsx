@@ -309,11 +309,15 @@
 
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import supabase from "../supabaseClient";
 import Nav from "../pages/Nav";
 import UserNav from "./UserNav";
 
 const UserCart = () => {
+      const navigate = useNavigate();
+
   const [cartProducts, setCartProducts] = useState([]);
 
   useEffect(() => {
@@ -374,6 +378,8 @@ const UserCart = () => {
       alert("Item removed from cart.");
       // Refresh cart after removing
       // You might want to call fetchCartAndProducts here or use a better state management
+      //AILA KO LAGI WORST WAY HO CHITAI IMPROVE GARCHU
+      //AILE KAM VAI RAKHYA CHA , JUST FOR NOW
       window.location.reload();
     }
   }
@@ -400,7 +406,7 @@ const UserCart = () => {
               <h2 className="text-lg font-semibold">{product.name}</h2>
               <p className="text-gray-600 mb-1">Rs. {product.price}</p>
               <p className="text-sm text-gray-500">{product.description}</p>
-              <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-all" onClick={() => navigate(`/order/${product.id}`)}>Buy</button>
+              <button className="bg-green-500 mt-2 cursor-pointer hover:bg-green-600 text-white px-4 py-2 rounded-md transition-all" onClick={() => navigate(`/order/${product.id}`)}>Buy</button>
               <button
                 onClick={() => removeFromCart(id)}
                 className="remove-btn border p-2 m-2 rounded-lg cursor-pointer bg-red-400 text-white font-bold"
