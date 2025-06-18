@@ -12,3 +12,4 @@ const ToReceive = () => {
 }
 
 export default ToReceive
+
