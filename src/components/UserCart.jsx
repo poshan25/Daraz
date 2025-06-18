@@ -298,6 +298,8 @@ import UserNav from "./UserNav";
 const UserCart = () => {
       const navigate = useNavigate();
 
+      
+
   const [cartProducts, setCartProducts] = useState([]);
 
   useEffect(() => {
@@ -312,13 +314,10 @@ const UserCart = () => {
         return;
       }
 
+      console.log(cartProducts.length)
       // Step 2: Get all product IDs from cart items
       const productIds = cartItems.map(item => item.product_id);
 
-      if (productIds.length === 0) {
-        setCartProducts([]);
-        return;
-      }
 
       // Step 3: Fetch products by IDs
       const { data: products, error: productError } = await supabase
@@ -360,13 +359,14 @@ const UserCart = () => {
       // You might want to call fetchCartAndProducts here or use a better state management
       //AILA KO LAGI WORST WAY HO CHITAI IMPROVE GARCHU
       //AILE KAM VAI RAKHYA CHA , JUST FOR NOW
-      window.location.reload();
+      // window.location.reload();
+      setCartProducts(prev => prev.filter((item => item.id !== cartItemId)))
     }
   }
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-        <UserNav/>
+        <UserNav cartLength={cartProducts.length}/>
       <h1 className="text-2xl font-bold text-center mb-6">My Cart</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

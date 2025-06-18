@@ -132,6 +132,10 @@
 
 // export default ViewOrder;
 
+
+
+
+
 import React, { useEffect, useState } from "react";
 import supabase from "../supabaseClient";
 import AdminNav from "../components/AdminNav";
@@ -236,11 +240,12 @@ const ViewOrder = () => {
 
 export default ViewOrder;
 
+
 // My code first gets all orders from the database that are not confirmed yet.
-//  Then, it shows these orders on the page with their details. Each order has
-//   a “Confirm Order” button. When I click the button, the order status changes
-//    to “confirmed” in the database. The order is removed from the list on the
-//     page, and a small message appears for 1 second to show it is confirmed.
-//      When I refresh the page, only orders that are not confirmed show again.
-//       This way, the app updates the order status both in the database and
-//        on the page quickly and easily.
+// Then, it shows these orders on the page with their details. Each order has
+// a “Confirm Order” button. When I click the button, the order status changes
+// to “confirmed” in the database. The order is removed from the list on the
+// page, and a small message appears for 1 second to show it is confirmed.
+// When I refresh the page, only orders that are not confirmed show again.
+// This way, the app updates the order status both in the database and
+// on the page quickly and easily.
