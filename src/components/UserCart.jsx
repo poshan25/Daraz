@@ -360,12 +360,12 @@ const UserCart = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen px-38 bg-gradient-to-b from-[#cfe3d4] to-[#95b59a] p-6">
         <UserNav cartLength={cartProducts.length}/>
-      <h1 className="text-2xl font-bold text-center mb-6">My Cart</h1>
+      <h1 className="text-2xl font-bold text-center mt-10 mb-6">My Cart</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cartProducts.length === 0 && <p>Your cart is empty.</p>}
+        {/* {cartProducts.length === 0 && <p>Your cart is empty.</p>} */}
 
         {cartProducts.map(({ id, product }) => (
           product && (

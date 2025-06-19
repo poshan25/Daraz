@@ -22,21 +22,11 @@
 
 // // export default UserNav;
 
-
-
-
-
-
-
-
-
 // import React, { useEffect } from "react";
 // import { Link, useSearchParams } from "react-router-dom";
 
 // const UserNav = ({ cartLength }) => {
-    
-    
-    
+
 //   return (
 //     <nav className="flex border p-5 m-5 justify-around rounded-lg bg-emerald-300 text-gray-700 font-semibold">
 //       <Link to="/user">Home</Link>
@@ -67,14 +57,9 @@
 
 // export default UserNav;
 
-
-
-
-
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import supabase from "../supabaseClient"; // make sure this import is correct
+import supabase from "../supabaseClient";
 
 const UserNav = () => {
   const [cartLength, setCartLength] = useState(0);
@@ -88,35 +73,57 @@ const UserNav = () => {
     };
 
     fetchCartLength();
-
   }, []);
 
   return (
-    <nav className="flex border p-5 m-5 justify-around rounded-lg bg-emerald-300 text-gray-700 font-semibold">
-      <Link to="/user">Home</Link>
-      <br />
-      <Link to="/orderStatus">Order Status</Link>
-      <br />
-      <Link to="/toReceive">To Receive</Link>
-      <br />
-      <Link to="/received">Received</Link>
-      <br />
+    // <nav className="flex border p-5 m-5 justify-around rounded-lg bg-emerald-300 text-gray-700 font-semibold">
+    <div>
+      {/* Navbar */}
+      <header className="w-full flex items-center justify-between px-6 ">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <div className="flex flex-col items-center">
+            <img src="/images/mainLogo.png" alt="Taboo Logo" className="w-17" />
+            {/* <p className="text-[#1e2939] text-xl font-semibold">Veabliss</p> */}
+            <p className="text-xl font-semibold bg-gradient-to-r from-emerald-600 to-emerald-500 text-transparent bg-clip-text">
+              Veabliss
+            </p>
+          </div>
 
-      <div className="relative">
+          {/* <span className="font-semibold text-sm text-gray-700">ORGANICS</span> */}
+        </div>
 
-        <Link to="/userCart" className="relative inline-block">
-          Cart
-          {cartLength > 0 && (
-            <span className="absolute -top-2 -right-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
-              {cartLength}
-            </span>
-          )}
-        </Link>
-      </div>
+        <nav
+          className="hidden md:flex items-center mt-15 gap-8 text-base text-[#3f2b2a]
+ font-semibold tracking-widest uppercase"
+        >
+          <Link to="/">Home</Link>
+          <br />
+          <Link to="/orderStatus">Order Status</Link>
+          <br />
+          <Link to="/toReceive">To Receive</Link>
+          <br />
+          <Link to="/received">Received</Link>
+          <br />
 
-      <br />
-      <Link to="/">Switch Role</Link>
-    </nav>
+          <div className="relative">
+            <Link to="/userCart" className="relative inline-block">
+              Cart
+              {cartLength > 0 && (
+                <span className="absolute -top-2 -right-4 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+                  {cartLength}
+                </span>
+              )}
+            </Link>
+          </div>
+
+          <br />
+          {/* <Link to="/">Switch Role</Link> */}
+        </nav>
+        {/* <UserNav/> */}
+      </header>
+      <hr className="border-b mt-3 border-[#a8a297]" />
+    </div>
   );
 };
 

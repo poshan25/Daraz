@@ -3,6 +3,8 @@ import Nav from './Nav'
 import UserProducts from './UserProducts'
 import Verify from '../components/Verify'
 import TabooOrganics from './TabooOrganics'
+import User from '../components/User'
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
         {/* <UserProducts/> */}
 
         <TabooOrganics/>
+        <User/>
+        <Footer/>
         {/* <Verify/> */}
     </div>
   )
