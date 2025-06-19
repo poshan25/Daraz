@@ -66,6 +66,12 @@
 // };
 
 // export default UserNav;
+
+
+
+
+
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import supabase from "../supabaseClient"; // make sure this import is correct
@@ -83,7 +89,6 @@ const UserNav = () => {
 
     fetchCartLength();
 
-    // Optionally, you can refetch periodically or listen to changes if your setup allows
   }, []);
 
   return (
@@ -98,6 +103,7 @@ const UserNav = () => {
       <br />
 
       <div className="relative">
+
         <Link to="/userCart" className="relative inline-block">
           Cart
           {cartLength > 0 && (

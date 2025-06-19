@@ -287,19 +287,14 @@
 
 
 
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import supabase from "../supabaseClient";
 import Nav from "../pages/Nav";
 import UserNav from "./UserNav";
 
 const UserCart = () => {
-      const navigate = useNavigate();
-
-      
-
+  const navigate = useNavigate();
   const [cartProducts, setCartProducts] = useState([]);
 
   useEffect(() => {

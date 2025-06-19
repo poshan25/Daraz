@@ -16,7 +16,7 @@ const OrderStatus = () => {
       products(id, name, price, image_url)
     `
         )
-        // .neq("status", "confirmed");
+        .neq("status", "received");
 
       if (error) {
         console.error("err fetching orders:", error);

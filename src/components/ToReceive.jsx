@@ -4,7 +4,28 @@ import supabase from '../supabaseClient';
 
 const ToReceive = () => {
      const [orders, setOrders] = useState([]);
-  // const [popupMsg, setPopupMsg] = useState("");
+       const [popupMsg, setPopupMsg] = useState("");
+     
+
+  async function confirmOrder(id) {
+    const { error } = await supabase
+      .from("orders")
+      .update({ status: "received" })
+      .eq("id", id);
+
+    if (error) {
+      setPopupMsg("failed while submitting received status");
+      console.error(error);
+      return;
+    }
+
+    setOrders((prevOrders) => prevOrders.filter((order) => order.id !== id));
+
+    setPopupMsg("Order received!");
+
+    // Hide popup after 1 second
+    setTimeout(() => setPopupMsg(""), 1000);
+  }
 
   useEffect(() => {
     async function fetchOrders() {
@@ -16,8 +37,7 @@ const ToReceive = () => {
       products(id, name, price, image_url)
     `
         )
-        //pending na dharera, confirmed matra dhekauna
-        .neq("status", "pending");
+        .eq("status", "confirmed");
 
       if (error) {
         console.error("err fetching orders:", error);
@@ -31,6 +51,22 @@ const ToReceive = () => {
   return (
     <>
     <UserNav/>
+     {popupMsg && (
+        <div
+          style={{
+            position: "fixed",
+            top: "20px",
+            right: "20px",
+            backgroundColor: "#4caf50",
+            color: "white",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            zIndex: 1000,
+          }}
+        >
+          {popupMsg}
+        </div>
+      )}
         <div>ToReceive</div>
          {orders.length === 0 && <p>No orders found.</p>}
       {orders.map((order) => (
@@ -46,14 +82,21 @@ const ToReceive = () => {
           />
           <p>Price: Rs. {order.products?.price}</p>
           <p>Quantity: {order.quantity}</p>
-          <p>Status: {order.status}</p>
+          <p>Status: {order.status} <span>order is on the way</span></p>
           <br />
+
           {/* <button
             className="border rounded-xl cursor-pointer p-2 bg-green-300 m-2"
             onClick={() => confirmOrder(order.id)}
           >
             Confirm Order
           </button> */}
+          <button
+            className="border rounded-xl cursor-pointer p-2 bg-green-300 m-2"
+            onClick={() => confirmOrder(order.id)}
+          >
+            Order Received
+          </button>
         </div>
       ))}
 
@@ -61,5 +104,4 @@ const ToReceive = () => {
   )
 }
 
-export default ToReceive
-
+export default ToReceive;
