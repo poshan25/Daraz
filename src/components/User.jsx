@@ -82,7 +82,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import supabase from "../supabaseClient";
-import UserNav from "./UserNav";
+// import UserNav from "./UserNav";
 
 const User = () => {
   const navigate = useNavigate();
@@ -116,12 +116,12 @@ const User = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#cfe3d4] to-[#95b59a]  sm:px-6">
+    <div className="min-h-screen mt-[-50px] bg-gradient-to-b from-[#cfe3d4] to-[#95b59a]  sm:px-6 pb-20">
       <div className=" px-38">
- <UserNav />
+ {/* <UserNav /> */}
       
       <div className="max-w-7xl mx-auto ">
-        <h1 className="text-3xl mt-10 sm:text-4xl font-bold mb-8 text-center text-gray-800">
+        <h1 className="text-3xl  pt-30 sm:text-4xl font-bold mb-8 text-center text-gray-800">
           New Products
         </h1>
 

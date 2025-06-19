@@ -20,6 +20,7 @@ import Received from "./components/Received";
 import UserCart from "./components/UserCart";
 import UserProducts from "./pages/UserProducts";
 import OrderStatus from "./components/OrderStatus";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
     <Route path="/" element={<Home />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
       <Route path="/adminAddProduct" element={<AdminAddProduct />}></Route>
+            <Route path="/products" element={<Products />}></Route>
+
       <Route path="/userCart" element={<UserCart />}></Route>
             <Route path="/viewOrder" element={<ViewOrder />}></Route>
 

@@ -367,7 +367,9 @@ const PlaceOrder = () => {
   );
 
   return (
-    <div className="min-h-screen bg-[#acc8b1] flex flex-col">
+  
+    <div>
+        <div className="min-h-screen  px-38  bg-[#acc8b1] flex flex-col">
       <UserNav />
       
       <main className="flex-grow">
@@ -457,7 +459,9 @@ const PlaceOrder = () => {
         </div>
       </main>
 
-     <Footer/>
+     {/* <Footer/> */}
+    </div>
+      <Footer/>
     </div>
   );
 };

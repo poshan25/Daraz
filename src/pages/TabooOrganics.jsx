@@ -24,7 +24,7 @@ const TabooOrganicsPage = () => {
               PREMIUM HEMP PRODUCTS
             </p>
             <h1 className="text-5xl font-bold mb-10 mt-[-10px] text-gray-800">
-              Veabliss Organics
+              Veablis Organics
             </h1>
             <p className="text-base font-semibold text-gray-600">
               Using organic farming methods, premium ingredients, and meticulous
@@ -45,7 +45,7 @@ const TabooOrganicsPage = () => {
             {/* <Link to="/userCart">Order Status</Link> */}
 
             <div className="mt-4 w-fit font-semibold cursor-pointer px-6 py-3.5 bg-gradient-to-r from-[#b79494] to-[#926362]  text-white rounded-full text-sm hover:from-[#a37878] hover:to-[#c1a9a9]">
-              <Link to="/user">Shop now</Link>
+              <Link to="/products">Shop now</Link>
             </div>
           </div>
         </section>

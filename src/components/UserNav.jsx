@@ -84,9 +84,8 @@ const UserNav = () => {
         <div className="flex items-center gap-2">
           <div className="flex flex-col items-center">
             <img src="/images/mainLogo.png" alt="Taboo Logo" className="w-17" />
-            {/* <p className="text-[#1e2939] text-xl font-semibold">Veabliss</p> */}
             <p className="text-xl font-semibold bg-gradient-to-r from-emerald-600 to-emerald-500 text-transparent bg-clip-text">
-              Veabliss
+              Veablis
             </p>
           </div>
 
