@@ -67,7 +67,8 @@ const PlaceOrder = () => {
 🛍️ *Name:* ${product.name}
 🆔 *ID:* ${product.id}
 📝 *Description:* ${product.description}
-🖼️ *Image:* ${product.image_url}`;
+🖼️ *Image:* [view image](${product.image_url})`;
+
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -175,7 +176,7 @@ const PlaceOrder = () => {
             <div className="md:w-1/2 lg:w-3/5 p-8 md:p-12">
               <div className="mb-6">
                 <span className="inline-block px-3 py-1 text-sm font-semibold text-green-700 bg-green-100 rounded-full mb-4">
-                  Premium Hemp Product
+                  Premium QUALITY Product
                 </span>
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                   {product.name}
@@ -231,7 +232,7 @@ const PlaceOrder = () => {
                   onClick={handleBuyAndRedirect}
                   className="w-full bg-gradient-to-r from-[#94ce4c] to-[#5baf2f] hover:from-[#a37878] hover:to-[#c1a9a9]  text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                  Place Order
+                  Place order easily via whatsapp
                 </button>
                 
                 <button

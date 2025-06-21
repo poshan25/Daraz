@@ -21,15 +21,14 @@ const TabooOrganicsPage = () => {
           {/* Text Section */}
           <div className="max-w-md text-left space-y-4">
             <p className="text-lg tracking-widest font-semibold  text-gray-600">
-              PREMIUM HEMP PRODUCTS
+              PREMIUM QUALITY PRODUCTS
             </p>
             <h1 className="text-5xl font-bold mb-10 mt-[-10px] text-gray-800">
               Veablis Organics
             </h1>
-            <p className="text-base font-semibold text-gray-600">
-              Using organic farming methods, premium ingredients, and meticulous
-              care, we're able to produce powerful family friendly hemp products
-              at a reasonable price.
+            <p className="text-[17px] font-semibold text-gray-600">
+              We Provide Premium Quality Products At Affordable Prices Compared To Others Ecommerce Sites, Deliver All Over Nepal, With in 1 day delivery inside Valley.
+              
             </p>
             {/* <button className="mt-4 px-6 py-2 bg-[#7d5452] text-white rounded-full text-sm hover:bg-[#8e5c5c]"> */}
             {/* <button className="mt-4 px-6 py-2 bg-[#926362] text-white rounded-full text-sm hover:bg-[#8e5c5c]">

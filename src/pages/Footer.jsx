@@ -9,7 +9,7 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Veabliss Organics</h3>
               <p className="text-gray-300 mb-4">
-                Premium hemp products made with organic ingredients and sustainable practices.
+                Premium QUALITY products made with organic ingredients and sustainable practices.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-300 hover:text-white">
