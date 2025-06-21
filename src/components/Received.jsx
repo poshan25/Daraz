@@ -1,69 +1,11 @@
-// import React, { useEffect, useState } from "react";
-// import UserNav from "./UserNav";
-// import supabase from "../supabaseClient";
 
-// const Received = () => {
-//   const [orders, setOrders] = useState([]);
-
-//   useEffect(() => {
-//     async function fetchOrders() {
-//       let { data, error } = await supabase
-//         .from("orders")
-//         .select(
-//           `
-//       *,
-//       products(id, name, price, image_url)
-//     `
-//         )
-//         .eq("status", "received");
-
-//       if (error) {
-//         console.error("err fetching orders:", error);
-//       } else {
-//         setOrders(data);
-//       }
-//     }
-//     fetchOrders();
-//   }, []);
-
-//   return (
-//     <>
-//       <UserNav />
-//       {orders.length === 0 && <p>No orders found.</p>}
-//       {orders.map((order) => (
-//         <div
-//           key={order.id}
-//           style={{ border: "1px solid gray", margin: 10, padding: 10 }}
-//         >
-//           <h3>{order.products?.name}</h3>
-//           <img
-//             src={order.products?.image_url}
-//             alt={order.products?.name}
-//             width="100"
-//           />
-//           <p>Price: Rs. {order.products?.price}</p>
-//           <p>Quantity: {order.quantity}</p>
-//           <p>Status: {order.status}</p>
-//           <br />
-
-//           {/* <button
-//             className="border rounded-xl cursor-pointer p-2 bg-green-300 m-2"
-//             onClick={() => confirmOrder(order.id)}
-//           >
-//             Confirm Order
-//           </button> */}
-//         </div>
-//       ))}
-//     </>
-//   );
-// };
-
-// export default Received;
 import React, { useEffect, useState } from "react";
 import UserNav from "./UserNav";
 import supabase from "../supabaseClient";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Received = () => {
+  const navigate = useNavigate()
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -116,9 +58,9 @@ const Received = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {orders.map((order) => (
-              <div key={order.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div key={order.id} className="bg-[#d3f5c5] rounded-xl shadow-lg overflow-hidden">
                 {/* Product Image */}
-                <div className="p-4 bg-gray-50 flex justify-center">
+                <div className="p-4 bg-[#d3f5c5] flex justify-center">
                   <img
                     src={order.products?.image_url}
                     alt={order.products?.name}
@@ -184,8 +126,8 @@ const Received = () => {
                 </div>
                 
                 {/* Action Buttons */}
-                <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-between">
-                  <button className="text-gray-600 hover:text-gray-800 font-medium">
+                <div className="px-6 py-4 bg-[#e7fdcc] border-t border-gray-200 flex justify-between">
+                  <button  onClick={() => navigate(`/order/${order.product_id}`)} className="text-gray-600 hover:text-gray-800 font-medium">
                     Buy Again
                   </button>
                   <button className="text-gray-600 hover:text-gray-800 font-medium">

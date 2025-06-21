@@ -360,7 +360,7 @@ const UserCart = () => {
   }
 
   return (
-    <div className="min-h-screen px-38 bg-gradient-to-b from-[#cfe3d4] to-[#95b59a] p-6">
+    <div className="min-h-screen px-38 bg-gradient-to-b from-[#cfe3d4] to-[#95b59a] ">
         <UserNav cartLength={cartProducts.length}/>
       <h1 className="text-2xl font-bold text-center mt-10 mb-6">My Cart</h1>
 
