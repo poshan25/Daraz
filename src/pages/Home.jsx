@@ -6,14 +6,17 @@ import TabooOrganics from './TabooOrganics'
 import User from '../components/User'
 import Footer from './Footer'
 
+// import BestSelling from '../components/BestSelling'
+
 const Home = () => {
   return (
-    <div>
+    <div >
         {/* <Nav/> */}
         {/* <UserProducts/> */}
 
         <TabooOrganics/>
         <User/>
+        {/* <BestSelling/> */}
         <Footer/>
         {/* <Verify/> */}
     </div>

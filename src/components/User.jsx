@@ -116,7 +116,7 @@ const User = () => {
   }
 
   return (
-    <div className="min-h-screen mt-[-50px] bg-gradient-to-b from-[#cfe3d4] to-[#95b59a]  sm:px-6 pb-20">
+    <div className="min-h-screen mt-[-50px] bg-gradient-to-t from-[#fff4f4] to-[#d5e6d7]  sm:px-6 pb-20">
       <div className=" px-38">
  {/* <UserNav /> */}
       

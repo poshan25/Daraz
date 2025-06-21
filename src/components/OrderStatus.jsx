@@ -110,7 +110,7 @@ const OrderStatus = () => {
   };
 
   return (
-    <div className="min-h-screen px-38 bg-[#acc8b1]">
+    <div className="min-h-screen px-38 bg-gradient-to-r from-[#cfe3d4] to-[#95b59a]">
       <UserNav />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -133,7 +133,7 @@ const OrderStatus = () => {
         ) : (
           <div className="space-y-6">
             {orders.map((order) => (
-              <div key={order.id} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div key={order.id} className="bg-[#fffaee] rounded-xl shadow-lg overflow-hidden">
                 <div className="p-6 md:flex">
                   {/* Product Image */}
                   <div className="md:w-1/4 lg:w-1/5 flex-shrink-0">
@@ -145,7 +145,7 @@ const OrderStatus = () => {
                   </div>
                   
                   {/* Order Details */}
-                  <div className="mt-4 md:mt-0 md:ml-6 flex-grow">
+                  <div className="mt-4  md:mt-0 md:ml-6 flex-grow">
                     <div className="flex justify-between items-start">
                       <h3 className="text-xl font-bold text-gray-800">
                         {order.products?.name}
@@ -155,7 +155,7 @@ const OrderStatus = () => {
                       </span>
                     </div>
                     
-                    <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="mt-4 grid grid-cols-1  md:grid-cols-2 gap-4">
                       <div>
                         <p className="text-sm text-gray-500">Price</p>
                         <p className="text-lg font-semibold text-green-600">

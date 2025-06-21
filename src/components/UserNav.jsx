@@ -59,6 +59,8 @@
 
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import '@fontsource/prata';
+import '../index.css';
 import supabase from "../supabaseClient";
 
 const UserNav = () => {

@@ -155,7 +155,7 @@ const ToReceive = () => {
   }, []);
 
   return (
-    <div className="min-h-screen px-38 bg-[#acc8b1]">
+    <div className="min-h-screen px-38 bg-gradient-to-r from-[#cfe3d4] to-[#95b59a]">
       <UserNav />
       
       {/* Notification Popup */}
