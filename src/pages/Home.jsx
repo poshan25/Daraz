@@ -5,6 +5,7 @@ import Verify from '../components/Verify'
 import TabooOrganics from './TabooOrganics'
 import User from '../components/User'
 import Footer from './Footer'
+import BestSelling from '../components/BestSelling'
 
 // import BestSelling from '../components/BestSelling'
 
@@ -15,6 +16,7 @@ const Home = () => {
         {/* <UserProducts/> */}
 
         <TabooOrganics/>
+        <BestSelling/>
         <User/>
         {/* <BestSelling/> */}
         <Footer/>

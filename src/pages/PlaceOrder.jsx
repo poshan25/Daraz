@@ -367,7 +367,7 @@ const PlaceOrder = () => {
 
   return (
     <div>
-      <div className="min-h-screen px-38 bg-[#acc8b1] flex flex-col">
+      <div className="min-h-screen px-38 bg-[#fff8f7] flex flex-col">
         {popupMsg && (
           <div
             style={{
@@ -387,8 +387,8 @@ const PlaceOrder = () => {
         <UserNav />
 
         <main className="flex-grow">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-12">
+            <div className="bg-[#fbf5f1] rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
               {/* Product Image */}
               <div className="md:w-1/2 lg:w-2/5 bg-gray-100 flex items-center justify-center p-8">
                 <img
