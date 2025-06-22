@@ -55,7 +55,7 @@ const PlaceOrder = () => {
       return;
     }
 
-    setPopupMsg("Order confirmed!");
+    setPopupMsg("Order In Process");
 
     const phoneNumber = "9779824143454";
 
