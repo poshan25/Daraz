@@ -339,7 +339,7 @@ const PlaceOrder = () => {
       )}
       <UserNav />
 
-      <main className="flex-grow bg-[#acc8b1]">
+      <main className="flex-grow bg-[#fff4f4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12">
           <div className="bg-[#fbf5f1] rounded-xl md:rounded-2xl shadow-md md:shadow-xl overflow-hidden flex flex-col md:flex-row">
             {/* Product Image */}
