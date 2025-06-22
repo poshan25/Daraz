@@ -314,7 +314,7 @@ const User = () => {
       alert("Failed to add to cart");
       console.error(error);
     } else {
-      alert("Product added to cart!");
+      // alert("Product added to cart!");
     }
   }
 
