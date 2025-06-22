@@ -128,7 +128,7 @@ const Footer = () => {
                 Basantapur, Kathmandu, Nepal
               </li>
               
-            <Link to="/verify">Switch Role</Link>
+            <Link to="/adminform">Switch Role</Link>
             </ul>
           </div>
 

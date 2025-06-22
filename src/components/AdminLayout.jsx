@@ -1,11 +1,29 @@
 import React from "react";
 import AdminNav from "./AdminNav";
 import Footer from "./Footer";
-
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import supabase from "../supabaseClient";
 // import AdminNav from "./AdminNav";
 // import Footer from "./Footer";
 
 const AdminLayout = () => {
+    const navigate = useNavigate();
+
+  useEffect(() => {
+  const checkSession = async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    console.log("Session in AdminLayout:", session);
+
+    if (!session || session.user.email.trim().toLowerCase() !== "admin@123.com") {
+      alert("Unauthorized");
+      navigate("/adminform");
+    }
+  };
+
+  checkSession();
+}, []);
+
   return (
     <>
       <AdminNav />
