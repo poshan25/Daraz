@@ -123,7 +123,7 @@ const AdminLogin = () => {
     if (error) {
       alert("Login failed: " + error.message);
     } else {
-      alert("Admin logged in successfully!");
+      // alert("Admin logged in successfully!");
       navigate("/admin");
     }
   };
