@@ -81,6 +81,8 @@
 
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -125,6 +127,8 @@ const Footer = () => {
                 <FaMapMarkerAlt className="w-4 h-4 mr-2" />
                 Basantapur, Kathmandu, Nepal
               </li>
+              
+            <Link to="/verify">Switch Role</Link>
             </ul>
           </div>
 

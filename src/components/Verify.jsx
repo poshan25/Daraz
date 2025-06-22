@@ -8,7 +8,7 @@ const Verify = () => {
     if (role === "admin") {
       navigate("/admin");
     } else {
-      navigate("/user");
+      navigate("/");
     }
   };
   return (

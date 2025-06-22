@@ -329,7 +329,7 @@ const OrderStatus = () => {
                 </div>
                 
                 {/* Order Actions */}
-                <div className="bg-[#e7fdcc] px-4 sm:px-6 py-3 sm:py-4 border-t border-gray-200">
+                {/* <div className="bg-[#e7fdcc] px-4 sm:px-6 py-3 sm:py-4 border-t border-gray-200">
                   <div className="flex flex-col sm:flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-3">
                     <button className="px-3 sm:px-4 py-1.5 sm:py-2 border border-gray-300 rounded-lg text-sm sm:text-base text-gray-700 hover:bg-gray-100 transition">
                       View Details
@@ -338,7 +338,7 @@ const OrderStatus = () => {
                       Track Order
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
