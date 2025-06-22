@@ -45,13 +45,13 @@ const AdminRoute = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       const { data: { session } } = await supabase.auth.getSession();
-      console.log("AdminRoute session:", session);
+    //   console.log("AdminRoute session:", session);
 
       if (session && session.user.email.trim().toLowerCase() === "admin@123.com") {
-        console.log("AdminRoute: authorized");
+        // console.log("AdminRoute: authorized");
         setAuthorized(true);
       } else {
-        console.log("AdminRoute: NOT authorized");
+        // console.log("AdminRoute: NOT authorized");
         setAuthorized(false);
       }
     };
