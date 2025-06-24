@@ -34,7 +34,6 @@ const AdminLayout = () => {
              <br />
              <h1 className='text-xl'>Hope You Are Doing Great</h1>
         </div>
-      {/* <main>{children}</main> */}
       <Footer />
     </>
   );

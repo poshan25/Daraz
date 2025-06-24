@@ -110,10 +110,10 @@ const AdminLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    if (email !== "admin@123.com") {
-      alert("Access denied: Only admin can log in");
-      return;
-    }
+    // if (email !== "admin@123.com") {
+    //   alert("Access denied: Only admin can log in");
+    //   return;
+    // }
 
     const { data, error } = await supabase.auth.signInWithPassword({
       email,

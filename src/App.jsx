@@ -38,7 +38,7 @@ function App() {
   return (
     <Routes>
     <Route path="/" element={<Home />}></Route>
-        <Route path="/admin" element={
+        <Route path="/admin/*" element={
           <AdminRoute>
              <Admin />
           </AdminRoute>
@@ -94,3 +94,5 @@ function App() {
 }
 
 export default App;
+
+

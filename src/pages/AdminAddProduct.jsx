@@ -503,40 +503,40 @@ const AdminAddProduct = () => {
   }, []);
 
   // Upload image to Supabase Storage
-  const uploadImage = async (event) => {
-    const file = event.target.files[0];
-    if (!file) {
-      alert("No file selected!");
-      return;
-    }
+ const uploadImage = async (event) => {
+  const file = event.target.files[0];
+  if (!file) return alert("No file selected!");
 
-    setUploading(true);
+  setUploading(true);
 
-    const fileName = `${Date.now()}_${file.name}`;
+  // Clean file name: replace spaces with underscores, remove special chars
+  const cleanedFileName = file.name.replace(/\s+/g, "_").replace(/[^a-zA-Z0-9._-]/g, "");
+  const fileName = `${Date.now()}_${cleanedFileName}`;
 
-    const { error } = await supabase.storage
-      .from("product-images")
-      .upload(fileName, file, { upsert: true });
+  const { error } = await supabase.storage
+    .from("product-images")
+    .upload(fileName, file, { upsert: true });
 
-    if (error) {
-      alert("Error uploading image: " + error.message);
-      setUploading(false);
-      return;
-    }
-
-    const { data: { publicUrl }, error: urlError } = supabase.storage
-      .from("product-images")
-      .getPublicUrl(fileName);
-
-    if (urlError) {
-      alert("Error getting public URL: " + urlError.message);
-      setUploading(false);
-      return;
-    }
-
-    setImageUrl(publicUrl);
+  if (error) {
+    alert("Error uploading image: " + error.message);
     setUploading(false);
-  };
+    return;
+  }
+
+  const { data: { publicUrl }, error: urlError } = supabase.storage
+    .from("product-images")
+    .getPublicUrl(fileName);
+
+  if (urlError) {
+    alert("Error getting public URL: " + urlError.message);
+    setUploading(false);
+    return;
+  }
+
+  setImageUrl(publicUrl);
+  setUploading(false);
+};
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
