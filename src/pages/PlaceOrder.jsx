@@ -72,7 +72,7 @@ const PlaceOrder = () => {
 📝 Description: ${product.description}
 🖼️ Image: ${shortUrl}`;
 
-      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      const whatsappURL = `https://wa.me/${phoneNumbe}?text=${encodeURIComponent(
         message
       )}`;
 
@@ -447,5 +447,6 @@ export default PlaceOrder;
 //     </div>
 //   );
 // };
+
 
 // export default PlaceOrder;
