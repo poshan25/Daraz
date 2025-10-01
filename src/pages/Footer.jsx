@@ -117,7 +117,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-center justify-center md:justify-start">
                 <FaPhoneAlt className="w-4 h-4 mr-2" />
-                <a href="tel:9824143454">+977 9824143454</a>
+                <a href="tel:9824143454">+977 98  guess the remaining :) </a>
               </li>
               <li className="flex items-center justify-center md:justify-start">
                 <FaEnvelope className="w-4 h-4 mr-2" />
@@ -152,5 +152,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;
