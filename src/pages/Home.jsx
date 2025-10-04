@@ -10,6 +10,7 @@ import Form from '../components/AdminForm'
 
 // import BestSelling from '../components/BestSelling'
 
+
 const Home = () => {
   return (
     <div >
@@ -25,7 +26,7 @@ const Home = () => {
     </div>
     // <div>
     //   <Form/>
-    
+
     // </div>
   )
 }
