@@ -59,6 +59,7 @@
 import React from 'react';
 import { CalendarDays, ShoppingBag, Gift, RefreshCw } from 'lucide-react';
 
+
 const features = [
   {
     icon: <CalendarDays size={35} className="text-pink-600 mx-auto" />,
@@ -77,7 +78,7 @@ const features = [
   },
   {
     icon: <RefreshCw size={35} className="text-pink-600 mx-auto" />,
-    title: 'Free global returns',
+    title: ' Global returns',
     desc: 'At imperdiet dui accumsan sit amet nulla risus est ultricies quis.',
   },
 ];
@@ -108,3 +109,4 @@ const BestSelling = () => {
 };
 
 export default BestSelling;
+
