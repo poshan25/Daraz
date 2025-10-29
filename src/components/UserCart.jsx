@@ -388,6 +388,7 @@
 //               >
 //                 Remove from Cart
 //               </button>
+//                <p></p>
 //             </div>
 //           )
 //         ))}
@@ -397,14 +398,6 @@
 // };
 
 // export default UserCart;
-
-
-
-
-
-
-
-
 
 
 
@@ -539,5 +532,6 @@ const UserCart = () => {
     </div>
   );
 };
+
 
 export default UserCart;
