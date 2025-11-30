@@ -107,6 +107,5 @@ const BestSelling = () => {
     </section>
   );
 };
-
 export default BestSelling;
 
